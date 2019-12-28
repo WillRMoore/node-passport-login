@@ -1,0 +1,29 @@
+<div class="row mt-5">
+  <div
+    class="col-md-6"
+    style="margin: auto; float: none; padding-top: 1rem; padding-bottom: 1rem;"
+  >
+    <form action="/users/login" method="post">
+      <h1>Login</h1>
+      <%- include("./partials/messages") -%>
+      <div class="form-group">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="pasword"
+            name="password"
+            id="password"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">Login</button>
+    </form>
+    <br />
+    <small>Don't have an account? <a href="/users/signup">Sign-up</a></small>
+  </div>
+</div>

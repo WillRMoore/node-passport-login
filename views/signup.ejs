@@ -1,0 +1,38 @@
+<div class="row mt-5">
+  <div
+    class="m-auto col-md-6"
+    style="margin: auto; float: none; padding-top: 1rem; padding-bottom: 1rem;"
+  >
+    <div class="card card-body">
+      <form action="/users/signup" method="post">
+        <h1>Sign-up for a New Account</h1>
+        <div class="form-group">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="name"
+              name="name"
+              class="form-control"
+              value="<%= typeof name != 'undefined' ? name : '' %>"
+            />
+          </div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            value="<%= typeof email != 'undefined' ? email : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" class="form-control" />
+        </div>
+        <%- include('./partials/messages') -%>
+        <button type="submit" class="btn btn-success">Create Account</button>
+      </form>
+      <br />
+      <small>Already have an account? <a href="/users/login">Login</a></small>
+    </div>
+  </div>
+</div>
